@@ -3,12 +3,14 @@ import Vuex from 'vuex'
 
 import cachePlugin from './plugin'
 
-import xxx from './module/xxx'
+import modal from './module/modal'
+import me from './module/me'
+import weapon from './module/weapon'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   modules: {
-    xxx,
+    modal, me, weapon,
   },
   plugins: [cachePlugin],
 })

@@ -9,6 +9,8 @@ import date from './filter/date'
 import number from './filter/number'
 import phone from './filter/phone'
 
+import './assets/css/global.css'
+
 Vue.use(util)
 Vue.filter('date', date)
 Vue.filter('number', number)
