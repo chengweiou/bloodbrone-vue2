@@ -5,7 +5,7 @@
       <section class="center pointer link" @click="go('weaponList')">weapons</section>
       <div class="center" style="width: 100px;">
         <section v-if="auth" class="center pointer link" @click="logout">logout</section>
-        <section v-else class="center pointer link" @click="onLogin">login</section>
+        <section v-else class="center pointer link" @click="onLogin">{{$t('login')}}</section>
       </div>
     </div>
   </header>
@@ -39,3 +39,14 @@ export default {
 
 <style>
 </style>
+
+<i18n>
+  {
+    "en": {
+      "login": "login"
+    },
+    "zh": {
+      "login": "登录"
+    }
+  }
+</i18n>

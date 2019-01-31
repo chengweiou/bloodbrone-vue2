@@ -1,9 +1,20 @@
 <template>
-  <footer class="center" style="height: 100px;">&copy;2018 chengweiou</footer>
+  <footer class="center df-column" style="height: 100px;">
+    <section class="df df-column">
+      <div @click="changeLang('zh')">zh</div>
+      <div @click="changeLang('en')">en</div>
+    </section>
+    &copy;2018 chengweiou</footer>
 </template>
 
 <script>
 export default {
+  methods: {
+    changeLang(e) {
+      this.$i18n.locale = e
+      this.$storage.set('lang', this.$i18n.locale)
+    },
+  },
 }
 </script>
 
