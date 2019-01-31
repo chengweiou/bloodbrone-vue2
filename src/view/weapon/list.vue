@@ -33,7 +33,7 @@
       <section class="df center">total: {{total}}</section>
     </div>
     <modal>
-      <div slot="v" class="center" style="width: 300px; background: #444;">
+      <div slot="v" class="bg-black center" style="width: 300px;">
         <div style="width: 80%; height: 80%;">
           <div class="center f-t1" style="margin: 20px 0;">Create Weapon</div>
           <div style="margin-bottom: 20px;">

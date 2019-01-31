@@ -14,12 +14,14 @@ const actions = {
   async save({ commit, dispatch, state, rootState }, payload, config = {}) {
     let rest = await uploadService.save({ file: payload.img })
     if (rest.code !== 'SUCCESS') {
+      dispatch('failBox/onRest', rest, { root: true })
       return
     }
     payload.imgSrc = rest.data
     delete payload.img
     rest = await service.save(payload)
     if (rest.code !== 'SUCCESS') {
+      dispatch('failBox/onRest', rest, { root: true })
       return
     }
     state.list.push({ ...payload, id: rest.data })
@@ -29,6 +31,7 @@ const actions = {
   async loadById({ commit, dispatch, state, rootState }, payload, config = {}) {
     let rest = await service.loadById({ id: payload.id })
     if (rest.code !== 'SUCCESS') {
+      dispatch('failBox/onRest', rest, { root: true })
       return
     }
     commit('detail', rest.data)
@@ -42,6 +45,7 @@ const actions = {
   async count({ commit, dispatch, state, rootState }, payload, config = {}) {
     let rest = await service.count(state.filter)
     if (rest.code !== 'SUCCESS') {
+      dispatch('failBox/onRest', rest, { root: true })
       return
     }
     commit('total', rest.data)
@@ -49,6 +53,7 @@ const actions = {
   async load({ commit, dispatch, state, rootState }, payload, config = {}) {
     let rest = await service.load(state.filter)
     if (rest.code !== 'SUCCESS') {
+      dispatch('failBox/onRest', rest, { root: true })
       return
     }
     commit('list', rest.data)

@@ -1,6 +1,6 @@
 <template>
   <div v-if="show" class="center" style="width: 100%; height: 100%; background: rgba(255, 255, 255, .3); position: fixed; top: 0;">
-    <div class="center" style="width: 300px; height: 300px; background: #444; position: relative;">
+    <div class="center bg-black" style="width: 300px; height: 300px; position: relative;">
       <div style="position: absolute; top: 0; right: 0;"><div class="center pointer" style="width: 30px; height: 30px;" @click="off">x</div></div>
       <div style="width: 80%; height: 80%;">
         <div class="center f-t1" style="margin-bottom: 50px;">Login</div>

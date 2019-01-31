@@ -21,6 +21,12 @@ button {
 .c-white {
   color: #fff;
 }
+.bg-black {
+  background: #444;
+}
+.c-black {
+  color: #444;
+}
 
 .btn-white {
   background: transparent;

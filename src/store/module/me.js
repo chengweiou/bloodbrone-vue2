@@ -17,8 +17,8 @@ const actions = {
   },
   async login({ commit, dispatch, state, rootState }, payload, config = {}) {
     let rest = await accountService.login(payload)
-    if (rest.code === 'SUCCESS') {
-      // dispatch('failBox/onRest', rest, { root: true })
+    if (rest.code !== 'SUCCESS') {
+      dispatch('failBox/onRest', rest, { root: true })
       return
     }
     commit('login', rest.data)
