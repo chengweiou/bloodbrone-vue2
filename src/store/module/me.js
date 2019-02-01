@@ -21,7 +21,7 @@ const actions = {
       dispatch('failBox/onRest', rest, { root: true })
       return
     }
-    commit('login', rest.data)
+    commit('login', rest.data.user)
     router.replace({ name: 'refresh' })
   },
   async logout({ commit, dispatch, state, rootState }, payload, config = {}) {
