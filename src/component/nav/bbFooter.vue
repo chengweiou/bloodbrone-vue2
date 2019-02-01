@@ -4,7 +4,8 @@
       <div @click="changeLang('zh')">zh</div>
       <div @click="changeLang('en')">en</div>
     </section>
-    &copy;2018 chengweiou</footer>
+    &copy;2018 chengweiou
+  </footer>
 </template>
 
 <script>
